@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://unpkg.com/bootstrap-table@1.15.4/dist/bootstrap-table.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="app.js"></script>
+</head>
+
+<body>
+    <script src="https://www.gstatic.com/firebasejs/6.4.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.4.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.4.1/firebase-database.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyBL5QaQYXNqfnHqPXKewifQG0gd-VDYqMA",
+            authDomain: "ppsu-52213.firebaseapp.com",
+            databaseURL: "https://ppsu-52213.firebaseio.com",
+            projectId: "ppsu-52213",
+            storageBucket: "",
+            messagingSenderId: "908680046305",
+            appId: "1:908680046305:web:dc736d95933d1df2"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <div class="container-fluid">
+        <div style="margin: 30px">
+            <h2 class="text-center">Generate redirect URL</h2>
+        </div>
+        <div style="margin: 30px">
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col-8">
+                        <form class="form-inline">
+                            <br>
+                            <label class="mb-2 mr-sm-2">URL :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                            <input type="text" class="form-control mb-2 mr-sm-2" style="width: 500px" id="redirectURL"
+                                placeholder="URL" name="redirectURL" required>
+                            <button type="submit" class="btn btn-primary mb-2" style="width: 100px"
+                                onclick="generateURL()">SUBMIT</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+    <div class="container-fluid" >
+
+        <div class="col-md-8 offset-md-2" >
+            <table style="width:100%" class="table table-bordered" >
+                    <tr>
+                <thead>
+                        <th style="width: 50% ; text-align: center">Redirect URL</th>
+                        <th style="width: 50% ; text-align: center">Destination URL</th>
+                    </tr>
+                </thead>
+                <tbody id="myTable">
+                    
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-4 offset-md-4"></div>
+
+    </div>
+
+
+    <div style="margin: 30px">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-8">
+                    <form class="form-inline">
+                        <label class="mb-2 mr-sm-2">Search from destination URL :&nbsp;</label>
+                        <input type="text" class="form-control mb-2 mr-sm-2" style="width: 500px" id="searchURL"
+                            placeholder="Enter keywords" name="searchURL">
+                        <button type="submit" class="btn btn-primary mb-2" style="width: 100px"
+                            onclick="saveSearch()">SEARCH</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

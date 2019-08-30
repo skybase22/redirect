@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8 " name="viewport" content="initial-scale=1.0, width=device-width">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script type="text/javascript" src="login.js"></script>
+  <link rel="stylesheet" type="text/css" href="app.css">
+</head>
+
+<body>
+  <script src="https://www.gstatic.com/firebasejs/6.4.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.4.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.4.1/firebase-database.js"></script>
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyBL5QaQYXNqfnHqPXKewifQG0gd-VDYqMA",
+      authDomain: "ppsu-52213.firebaseapp.com",
+      databaseURL: "https://ppsu-52213.firebaseio.com",
+      projectId: "ppsu-52213",
+      storageBucket: "",
+      messagingSenderId: "908680046305",
+      appId: "1:908680046305:web:dc736d95933d1df2"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+  <div class="container-fluid">
+    <div style="margin: 10px">
+      <img width="189" height="71"
+        src="https://www.phuket.psu.ac.th/wp-content/uploads/2019/03/cropped-PSU_PHUKET-EN.png"
+        data-src="https://www.phuket.psu.ac.th/wp-content/uploads/2019/03/cropped-PSU_PHUKET-EN.png"
+        class="custom-logo lazyloaded" alt="PSU Phuket" itemprop="logo"
+        data-srcset="https://www.phuket.psu.ac.th/wp-content/uploads/2019/03/cropped-PSU_PHUKET-EN.png 1895w, https://www.phuket.psu.ac.th/wp-content/uploads/2019/03/cropped-PSU_PHUKET-EN-300x113.png 300w, https://www.phuket.psu.ac.th/wp-content/uploads/2019/03/cropped-PSU_PHUKET-EN-768x289.png 768w, https://www.phuket.psu.ac.th/wp-content/uploads/2019/03/cropped-PSU_PHUKET-EN-1024x385.png 1024w, https://www.phuket.psu.ac.th/wp-content/uploads/2019/03/cropped-PSU_PHUKET-EN-350x132.png 350w"
+        data-sizes="(max-width: 1895px) 100vw, 1895px" sizes="(max-width: 1895px) 100vw, 1895px"
+        srcset="https://www.phuket.psu.ac.th/wp-content/uploads/2019/03/cropped-PSU_PHUKET-EN.png 1895w, https://www.phuket.psu.ac.th/wp-content/uploads/2019/03/cropped-PSU_PHUKET-EN-300x113.png 300w, https://www.phuket.psu.ac.th/wp-content/uploads/2019/03/cropped-PSU_PHUKET-EN-768x289.png 768w, https://www.phuket.psu.ac.th/wp-content/uploads/2019/03/cropped-PSU_PHUKET-EN-1024x385.png 1024w, https://www.phuket.psu.ac.th/wp-content/uploads/2019/03/cropped-PSU_PHUKET-EN-350x132.png 350w">
+      <div class="login-page">
+        <div class="form">
+          <form class="login-form" id="form_id" method="post" name="myform">
+            <input type="text" placeholder="username" name="username" id="username" autofocus="autofocus" />
+            <input type="password" placeholder="password" name="password" id="password" />
+            <button type="submit" class="btn" onclick="validate()">login</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
