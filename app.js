@@ -76,7 +76,7 @@ function showURL() {
                         content += '<td>' + "https://ppsu-52213.firebaseapp.com?redirect=" + keyURL + '</td>'; //column1
                         content += '<td> <a href=' + fullURL + '>' + fullURL + '</a></td>'; //column1
                         content += '</tr>';
-                });git init
+                });
                  $('#myTable').append(content);
             }
         });
